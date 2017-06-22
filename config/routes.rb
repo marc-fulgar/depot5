@@ -1,4 +1,5 @@
 Depot5::Application.routes.draw do
+  devise_for :users
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -24,6 +25,8 @@ Depot5::Application.routes.draw do
     resources :carts
     root 'store#index', as: 'store', via: :all
   end
+  
+  root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

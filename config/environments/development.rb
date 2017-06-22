@@ -28,4 +28,6 @@ Depot5::Application.configure do
   config.assets.debug = true
   
   config.action_mailer.delivery_method = :test
+  
+  config.action_mailer.default_url_options = { hosts: 'localhost', port: 3000}
 end
