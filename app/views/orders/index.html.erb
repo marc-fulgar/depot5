@@ -31,4 +31,9 @@
 <br>
 
 <%= link_to 'New Order', new_order_path %>
-<p><%= paginate @orders %></p>
+<div class="flickr_pagination">
+	<div class="page_info">
+		<%= page_entries_info @orders %>
+	</div>
+	<p><%= will_paginate @orders %></p>
+</div>
