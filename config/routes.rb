@@ -26,7 +26,7 @@ Depot5::Application.routes.draw do
     root 'store#index', as: 'store', via: :all
   end
   
-  root to: "home#index"
+  root to: "admin#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

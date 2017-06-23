@@ -44,7 +44,10 @@
 				</ul>
 				<%= button_to 'Logout', destroy_user_session_path, method: :delete %>
 				<br><br>
-			<% end %>			
+			<% else %>
+				<%= button_to 'Admin Login', new_user_session_path %>
+				<br><br>
+			<% end %>
 			<%= (Time.now).strftime("It is now %I:%M %p") %><br>
 			<%= (Time.now).strftime("on %a, %e %B, %Y")%><br>
     </div>
